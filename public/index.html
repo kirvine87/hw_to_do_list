@@ -12,9 +12,11 @@
     <ul>
       <li v-for="item in items">
         <span>{{item.name}}</span>
-        <span>{{item.priority}}</span>
       </li>
     </ul>
+
+    <input type="text" v-model="newToDo" />
+    <button @click="saveNewItem">Save Task</button>
   </div>
 </body>
 </html>

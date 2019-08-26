@@ -10,7 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
       newToDo: ""
     },
     methods: {
-
+      saveNewItem: function() {
+        if (this.newToDo !== "") {
+          const itemToAdd = {name: this.newToDo, priority: false};
+          this.items.push(itemToAdd);
+          this.newToDo = "";
+        };
+      }
     }
 
   });
